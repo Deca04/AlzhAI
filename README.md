@@ -24,7 +24,7 @@ This project aims to develop an inclusive algorithm for the detection, recogniti
    * Symptoms
    * Diagnosis Information
 
-   Note: For a comprehensive explanation of each variable, please refer to the previous link to the dataset, where all variables are detailed thoroughly.
+   **Note**: For a comprehensive explanation of each variable, please refer to the previous link to the dataset, where all variables are detailed thoroughly.
    
    ### 2. Development of Predictive Model
    After identifying the key correlations from the historical data (through a correlation matrix), the next step involves:
