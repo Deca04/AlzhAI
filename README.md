@@ -15,6 +15,5 @@ This project aims to develop an inclusive algorithm for the detection, recogniti
    ### 2. Development of Predictive Model
    After identifying the key correlations from the historical data, the next step involves:
 
-   * Model Design: Developing a predictive model using machine learning techniques based on the selected features.
+   * Model Design: Developing a predictive model using Tensorflow, a basic model is enough considering the work is on a binary decision.
    * Model Training: Training the model with the processed historical data to optimize its accuracy.
-   * Model Evaluation: Evaluating the performance of the model using metrics such as accuracy, precision, recall, and F1-score.
