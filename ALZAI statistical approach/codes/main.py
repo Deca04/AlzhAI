@@ -15,16 +15,6 @@ import preprocessing_datas
 path = 'archive/trained_model.keras'
 
 def diagnose_new_patient(new_patient_data, path):
-    """
-    Function to diagnose a new patient using the trained model.
-    
-    Parameters:
-    - new_patient_data: A dictionary or DataFrame with the patient's data.
-    - model_path: The path to the saved model weights.
-    
-    Returns:
-    - diagnosis: The predicted diagnosis (0 or 1).
-    """
 
     # Convert new_patient_data to DataFrame if it's a dictionary
     if isinstance(new_patient_data, dict):
@@ -36,20 +26,18 @@ def diagnose_new_patient(new_patient_data, path):
 
     new_patient_df_standard_scaled = new_patient_df_standard_scaled.drop(["DoctorInCharge", "PatientID"], axis=1)
     new_patient_df_standard_scaled = new_patient_df_standard_scaled.astype(np.float32)
-    
-    # Load the model
+
+    # Model
     model = Sequential()  # Initialize a Sequential model
     model.add(Dense(units=1, activation='relu', input_shape=(new_patient_df_standard_scaled.shape[1],)))
     model.add(Dense(1, activation='sigmoid'))
     
-    # Compile the model
     adam = keras.optimizers.Adam(learning_rate=0.001)
     model.compile(loss='binary_crossentropy', optimizer=adam, metrics=["accuracy"])
     
-    # Load weights
     model.load_weights(path)
     
-    # Make a prediction
+    # Prediction
     prediction = model.predict(new_patient_df_standard_scaled)
     
     # Convert the prediction to binary outcome
@@ -57,7 +45,7 @@ def diagnose_new_patient(new_patient_data, path):
     
     return diagnosis
 
-# Example Diagnosis = 1
+# In the following example expected Diagnosis = 1 = Alzheimer's diseas
 new_patient_data = {
     "PatientID": "4768",
     "Age": 65,
@@ -93,8 +81,6 @@ new_patient_data = {
     "DifficultyCompletingTasks": 0,	
     "Forgetfulness": 0,
     "DoctorInCharge": "XXXConfid",
-
-    # Add all other necessary features
 }
 
 diagnosis = diagnose_new_patient(new_patient_data, path)
