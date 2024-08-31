@@ -12,8 +12,23 @@ This project aims to develop an inclusive algorithm for the detection, recogniti
    * Correlation Analysis: Identifying key features that have the highest correlation with the onset of Alzheimer's disease.
    * Feature Selection: Selecting the most relevant features to be used in the predictive model.
 
-   ### 2. Development of Predictive Model
-   After identifying the key correlations from the historical data, the next step involves:
+   The dataset used (updated at 2024) is the following: https://www.kaggle.com/dsv/8668279
+   The **dataset** contain: 
+   * Patient Information
+   * Patient ID
+   * Demographic Details
+   * Lifestyle Factors
+   * Medical History
+   * Clinical Measurements
+   * **Cognitive and Functional Assessments**
+   * Symptoms
+   * Diagnosis Information
 
-   * Model Design: Developing a predictive model using Tensorflow, a basic model is enough considering the work is on a binary decision.
-   * Model Training: Training the model with the processed historical data to optimize its accuracy.
+   Note: For a comprehensive explanation of each variable, please refer to the previous link to the dataset, where all variables are detailed thoroughly.
+   
+   ### 2. Development of Predictive Model
+   After identifying the key correlations from the historical data (through a correlation matrix), the next step involves:
+
+   * Model Design: Developing a predictive model using Tensorflow.
+     A basic model turns out to be efficient enough for the moment, an architecture built with one input and one output layer appears to minimize the loss function with an average accuracy of 82 percent.
+   * Model Training: once the model is trained on 2150 patients' data, the weight coefficients are save and used in a main example program where an example patient is tested.
