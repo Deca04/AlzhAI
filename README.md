@@ -1,5 +1,8 @@
 # AlzhAI
 
+![logo](https://github.com/user-attachments/assets/d2620d37-aec2-43f2-aab0-9f48b1ce2c4f)
+
+
 ## Project Overview
 This project aims to develop an inclusive algorithm for the detection, recognition, and prediction of Alzheimer's disease through the integration of statistical-historical data and MRI images. The goal is to create a reliable model that can assist in the early diagnosis and prediction of dementia-related diseases such as Alzheimer's.
 
