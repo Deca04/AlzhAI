@@ -1,6 +1,7 @@
 # AlzhAI
 
-![logo_small](https://github.com/user-attachments/assets/75fbcac0-a45a-44a8-8566-5466524726e4)
+![logo_mid](https://github.com/user-attachments/assets/6a0469e0-80c8-44fc-863f-7939b9eab653)
+
 
 
 ## Project Overview
