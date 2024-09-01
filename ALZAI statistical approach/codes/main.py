@@ -1,3 +1,17 @@
+"""
+===============================================================================
+Title:          AlzhAI
+Description:    This script performs detection of Alzheimer's disease using 
+                statistical data.
+
+Author:         Daniele De Carli
+Email:          danieledecarli04@gmail.com
+Date Created:   2024-08-30
+Last Modified:  2024-09-01
+Version:        1.0.0
+===============================================================================
+"""
+
 #Library for data
 import pandas as pd
 import numpy as np
