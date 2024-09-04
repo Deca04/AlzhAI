@@ -112,6 +112,4 @@ ax.plot_surface(X, Y, accuracy_array.T, cmap='viridis')
 ```
 
 ### 7. Results and Conclusion
-The project compares the performance of a neural network and a Random Forest classifier for predicting Alzheimer's disease using patient data. Both models provide insights into the effectiveness of different machine learning approaches in medical diagnostics.
-
-This expanded section in the README file provides users with a thorough understanding of the code structure, the libraries used, and the detailed steps taken for data preprocessing, model building, training, and evaluation.
+The ALZAI statical part of the project  compares the performance of a neural network and a Random Forest classifier for predicting Alzheimer's disease using patient data. Both models provide insights into the effectiveness of different machine learning approaches in medical diagnostics. All considered, **the accuracy of a `Random Forest Classifier` results to be higher than the first model realized with a sequential model**.
