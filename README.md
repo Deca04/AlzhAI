@@ -61,36 +61,35 @@ The project is developed by @Deca04 and @AlbeSud
    ```
    The split is performed with shuffling to ensure a random distribution of data points.
 
-5. Neural Network Model
-Model Architecture
-The neural network model is built using Keras’ Sequential API. The architecture consists of:
+   ### 5. Neural Network Model
+   **Model Architecture**
+   The neural network model is built using Keras’ Sequential API. The architecture consists of:
 
-Input Layer: Accepts input features.
-Hidden Layers: Four hidden layers with ReLU activation functions (16, 32, 64, and 16 units, respectively).
-Output Layer: A single neuron with a sigmoid activation function for binary classification (diagnosis of Alzheimer’s disease).
-Model Compilation and Training
-The model is compiled with:
+   * Input Layer: Accepts input features.
+   * Hidden Layers: Four hidden layers with ReLU activation functions (16, 32, 64, and 16 units, respectively).
+   * Output Layer: A single neuron with a sigmoid activation function for binary classification (diagnosis of Alzheimer’s disease).
+   * Model Compilation and Training
+     
+   The model is compiled with:
+   - Loss Function: binary_focal_crossentropy to address class imbalance in the dataset.
+   - Optimizer: Adam optimizer with a learning rate of 0.001.
+   - Metrics: Accuracy is used to evaluate the model.
+   The model is trained for 20 epochs with a batch size of 32. The training is repeated 10 times, with the confusion matrix being computed for each iteration to assess the model's performance in terms of false 
+   positives and false negatives.
 
-Loss Function: binary_focal_crossentropy to address class imbalance in the dataset.
-Optimizer: Adam optimizer with a learning rate of 0.001.
-Metrics: Accuracy is used to evaluate the model.
-The model is trained for 20 epochs with a batch size of 32. The training is repeated 10 times, with the confusion matrix being computed for each iteration to assess the model's performance in terms of false positives and false negatives.
+   ```ruby
+    for i in range(0,10):
+      history = basic_model.fit(X_train, y_train, epochs=20, batch_size=32)
+      ...
+      complete_matrix[i,0] = conf_mat[1,0]
+      complete_matrix[i,1] = conf_mat[0,1]
+   ```
 
-python
-Copia codice
-for i in range(0,10):
-    history = basic_model.fit(X_train, y_train, epochs=20, batch_size=32)
-    ...
-    complete_matrix[i,0] = conf_mat[1,0]
-    complete_matrix[i,1] = conf_mat[0,1]
-Model Evaluation and Saving
-After training, the model's performance is evaluated on the test set, and metrics like loss and accuracy are printed. The model weights are then saved for future use.
+   **Model Evaluation and Saving**
+   After training, the model's performance is evaluated on the test set, and metrics like loss and accuracy are printed. The model weights are then saved for the `main.py` program.
 
-python
-Copia codice
-basic_model.save_weights(path)
-6. Random Forest Model
-Model Configuration
+   ### 6. Random Forest Model
+   **Model Configuration**
 A Random Forest classifier is used as an alternative to the neural network model. The model is trained with varying parameters (n_estimators and max_depth) to observe how these hyperparameters affect accuracy.
 
 Hyperparameter Tuning
