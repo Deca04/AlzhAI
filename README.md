@@ -56,9 +56,9 @@ The project is developed by @Deca04 and @AlbeSud
    **Train-Test Split**
    The dataset is divided into training and testing sets using an 80-20 split:
 
-   '''ruby
+   ```ruby
    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0, shuffle=True)
-   '''
+   ```
    The split is performed with shuffling to ensure a random distribution of data points.
 
 5. Neural Network Model
