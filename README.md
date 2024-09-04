@@ -90,26 +90,28 @@ The project is developed by @Deca04 and @AlbeSud
 
    ### 6. Random Forest Model
    **Model Configuration**
-A Random Forest classifier is used as an alternative to the neural network model. The model is trained with varying parameters (n_estimators and max_depth) to observe how these hyperparameters affect accuracy.
+   A Random Forest classifier is used as an alternative to the neural network model. The model is trained with varying parameters (n_estimators and max_depth) to observe how these hyperparameters affect accuracy.
 
-Hyperparameter Tuning
-The code iterates over a range of values for n_estimators and max_depth to find the optimal configuration. The results are stored in a 2D array (accuracy_array) and then visualized using a 3D surface plot.
+   **Hyperparameter Tuning**
+   The code iterates over a range of values for n_estimators and max_depth to find the optimal configuration. The results are stored in a 2D array (accuracy_array) and then visualized using a 3D surface plot.
 
-python
-Copia codice
+```ruby
 for i in range(cicli1):
     for j in range(cicli2):
         clf = RandomForestClassifier(n_estimators=i+sfasamento1, max_depth=j+sfasamento2, ...)
         ...
-Visualization
+```
+
+**Visualization**
 A 3D plot is generated to visualize the relationship between n_estimators, max_depth, and model accuracy.
 
-python
-Copia codice
+```ruby
 fig = plt.figure(figsize=(10, 7))
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_surface(X, Y, accuracy_array.T, cmap='viridis')
-7. Results and Conclusion
+```
+
+### 7. Results and Conclusion
 The project compares the performance of a neural network and a Random Forest classifier for predicting Alzheimer's disease using patient data. Both models provide insights into the effectiveness of different machine learning approaches in medical diagnostics.
 
 This expanded section in the README file provides users with a thorough understanding of the code structure, the libraries used, and the detailed steps taken for data preprocessing, model building, training, and evaluation.
