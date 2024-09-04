@@ -4,7 +4,7 @@
 ## Project Overview
 This project aims to develop an inclusive algorithm for the detection, recognition, and prediction of Alzheimer's disease through the integration of statistical-historical data and MRI images. The goal is to create a reliable model that can assist in the early diagnosis and prediction of dementia-related diseases such as Alzheimer's.
 
-The project is developed by @Deca04 and @albesud
+The project is developed by @Deca04 and @AlbeSud
 
 ## Project Structure
    ### 1. Statistical Analysis of Historical Data
