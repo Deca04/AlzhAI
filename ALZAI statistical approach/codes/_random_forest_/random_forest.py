@@ -17,7 +17,7 @@ Version:        1.0.0
 import numpy as np
 
 import sys
-sys.path.insert(0, "C:\\Users\\danie\\Desktop\\work in progress\\Progetti\\ALZAI\\Code\\ALZAI statistical approach\\custom_libraries")
+sys.path.insert(0, "C:\\Users\\YUOR_NAME\\Desktop\\work in progress\\Progetti\\ALZAI\\Code\\ALZAI statistical approach\\custom_libraries")
 import preprocessing_datas
 
 import matplotlib.pyplot as plt
