@@ -1,4 +1,5 @@
-![logo_mid](https://github.com/user-attachments/assets/6a0469e0-80c8-44fc-863f-7939b9eab653)
+
+![backgroun2](https://github.com/user-attachments/assets/559f38ad-76a4-40aa-9dfb-4753048d3ffc)
 
 
 ## Project Overview
